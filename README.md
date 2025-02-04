@@ -1,4 +1,2 @@
-# paper
-
-3.1 Hardware Configuration
+# 3.1 Hardware Configuration
 This  hardware is equipped with the Renesas RA4M1 32-bit microcontroller (ARM Cortex M4 architecture), this board operates at a frequency of 48 MHz and offers ample memory resources (32 kB of SRAM and 256 kB of flash) \cite{Renesas2023}. The board supports multiple communication protocols, including UART, I2C, and SPI, facilitating flexible connectivity with peripheral components \cite{Arduino2023} (see figure ~\ref{fig:arduino_pinout}). WiFi and Bluetooth modules (ESP32-S3) enabling wireless monitoring and remote system control via the Arduino IoT Cloud platform are included \cite{ESP32}. 
