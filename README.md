@@ -4,7 +4,7 @@ The development of EM-SENSE, a prototype for electromagnetic (EM) data acquisiti
 ![Logo del proyecto](https://github.com/Sergiolopezflores/paper/tree/main/images/EM-SENSE-gadte.jpg)
 ![alt text](https://github.com/Sergiolopezflores/paper/main/images/EM-SENSE-gadte.jpg "Logo Title Text 1")
 <span>![</span><span>Complete setup</span><span>]</span>
-<span>(</span><span>https://raw.githubusercontent.com/Sergiolopezflores/paper/images/EM-SESNSE-gadte.jpg</span><span>)</span>
+<span>(</span><span>https://github.com/Sergiolopezflores/paper/tree/main/images/EM-SENSE-gadte.jpg</span><span>)</span>
 
 
 # 3.1 Hardware Configuration
