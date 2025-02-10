@@ -14,7 +14,7 @@ The LCD display provides instant feedback on detected signal intensity, enabling
 Below, we outline the different messages that may appear on the LCD screen:
 
 <p align="center">
-<img src="images/Arduino UNO R4 Wifi Conexiones.png" alt="Arduino Pinout Diagram" width="300"><img src="images/Arduino UNO R4.jpg" alt="Arduino Uno R4" width="300"><img src="images/Módulo SD AZDelivery SPI.jpg" alt="SPI SD card module" width="300"><img src="images/LCM1602C Module.png" alt="LCD display" width="300">
+<img src="images/Arduino UNO R4 Wifi Conexiones.png" alt="Arduino Pinout Diagram" width="250"><img src="images/Arduino UNO R4.jpg" alt="Arduino Uno R4" width="250"><img src="images/Módulo SD AZDelivery SPI.jpg" alt="SPI SD card module" width="250"><img src="images/LCM1602C Module.png" alt="LCD display" width="250">
 </p>
 
 Figure 2: (a) Pinout diagram of the Arduino UNO R4 WiFi, displaying the layout and functionalities of each pin, essential for the configuration of the EMSENSE prototype, (b) Arduino UNO R4 WiFi board, (c) SPI SD card module and (d) LCD display.
@@ -25,7 +25,6 @@ To achieve optimal sensitivity for detecting low-intensity EM signals, a near-fi
 
 <p align="center">
 <img src="images/Sondas.jpg" alt="Probes" width="300">
-
 Figure 3: Near-field probes.
 </p>
 
