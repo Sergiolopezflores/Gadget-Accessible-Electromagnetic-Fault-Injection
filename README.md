@@ -14,14 +14,14 @@ The LCD display provides instant feedback on detected signal intensity, enabling
 Below, we outline the different messages that may appear on the LCD screen:
 
 <p align="center">
-<img src="images/Arduino UNO R4.jpg" alt="Arduino Uno R4" width="300"><img src="images/Arduino UNO R4 Wifi Conexiones.png" alt="Arduino Pinout Diagram" width="300">
+<img src="images/Arduino UNO R4 Wifi Conexiones.png" alt="Arduino Pinout Diagram" width="100"><img src="images/Arduino UNO R4.jpg" alt="Arduino Uno R4" width="100"><img src="images/Módulo SD AZDelivery SPI.jpg" alt="SPI SD card module" width="100"><img src="images/LCM1602C Module.png" alt="LCD display" width="100">
 </p>
 
-Figure 2: (a) Pinout diagram of the Arduino UNO R4 WiFi, displaying the layout and functionalities of each pin, essential for the configuration of the EMSENSE prototype. Images of the Arduino UNO R4 WiFi board and its pinout diagram, essential components of the EM-SENSE prototype setup.
+Figure 2: (a) Pinout diagram of the Arduino UNO R4 WiFi, displaying the layout and functionalities of each pin, essential for the configuration of the EMSENSE prototype, (b) Arduino UNO R4 WiFi board, (c) SPI SD card module and (d) LCD display.
 
 
 # 3.2 Near-Field Probe Design and Placement
-To achieve optimal sensitivity for detecting low-intensity EM signals, a nearfield probe (Figure 3) was incorporated into the EM-SENSE design. The probe, replacing a conventional wire antenna, is critical for isolating and capturing low-level emissions, which are characteristic of computing environments. This near-field probe has been strategically positioned relative to the central processing unit (CPU) of the target system, based on a placement study that maximized signal quality by reducing noise and interference. This configuration allows for precise EM measurement in proximity to potential sources of EM variation, such as processor and memory components, which may reveal patterns related to specific software activities, including malware behavior.
+To achieve optimal sensitivity for detecting low-intensity EM signals, a near-field probe (Figure 3) was incorporated into the EM-SENSE design. The probe, replacing a conventional wire antenna, is critical for isolating and capturing low-level emissions, which are characteristic of computing environments. This near-field probe has been strategically positioned relative to the central processing unit (CPU) of the target system, based on a placement study that maximized signal quality by reducing noise and interference. This configuration allows for precise EM measurement in proximity to potential sources of EM variation, such as processor and memory components, which may reveal patterns related to specific software activities, including malware behavior.
 
 <p align="center">
 <img src="images/Sondas.jpg" alt="Probes" width="300">
@@ -31,20 +31,8 @@ Figure 3: Near-field probes.
 
 # 3.3 Physical Stabilization, Data Processing and Storage
 The EM-SENSE prototype utilizes a protoboard for stable component arrangement and flexible circuit modifications. This setup allows the rapid reconfiguration of elements, such as the LCD display and SD module, without permanent soldering, facilitating adjustments during the testing phase. The protoboard also supports the physical stabilization of components, essential for minimizing signal disruption caused by movement or electrical instability. To further ensure accurate readings, the system includes safeguards against ambient EM interference, such as grounding strategies and shielding, tailored to the near-field probe’s requirements. 
-Data captured by EM-SENSE is stored in real-time on the SD card module, allowing subsequent analysis with advanced signal processing techniques. This method ensures the integrity and availability of large datasets without interruption, supporting in-depth investigations of EM emissions over extended periods. The data recorded is primarily intended to capture deviations in EM patterns, which may correlate with specific software-induced activities, particularly those indicative of malware. Through data visualization on the integrated LCD, preliminary trends and anomalies can be assessed immediately, streamlining the identification of relevant signal features during testing.
-
-(a) Pinout diagram of the Arduino
-UNO R4 WiFi, displaying the layout
-and functionalities of each pin, essential for the configuration of the EMSENSE prototype.
-(b) Arduino UNO R4 WiFi board used
-as the core of the EM-SENSE prototype, chosen for its processing power
-and wireless capabilities.
-Figure 3: Images of the Arduino UNO R4 WiFi board and its pinout diagram,
-essential components of the EM-SENSE prototype setup.
+Data captured by EM-SENSE is stored in real-time on the SD card module, allowing subsequent analysis with advanced signal processing techniques. This method ensures the integrity and availability of large datasets without interruption, supporting in-depth investigations of EM emissions over extended periods. The data recorded is primarily intended to capture deviations in EM patterns, which may correlate with specific software-induced activities, particularly those indicative of malware. Through data visualization on the integrated LCD, preliminary trends and anomalies can be assessed immediately, streamlining the identification of relevant signal features during testing.
 
 
 # 3.4 Summary of Design Adaptations for Research Objectives
 Although EM-SENSE is based on a previously established design, substantial modifications have been made to meet the specific objectives of this research. Enhancements in signal sensitivity, data handling, and measurement precision ensure that the prototype meets the stringent requirements for detecting subtle EM variations associated with software execution. The device’s adaptability, facilitated by its modular design and the Arduino platform, makes EM-SENSE a highly suitable tool for controlled EM monitoring, enabling the identification of patterns potentially linked to malicious activity within computing systems.
-
-(a) AZDelivery SPI SD card module. (b) LCD display module (LCM1602C). (c) Near-field probes.
-Figure 4: Components of the EM-SENSE system: (a) SPI SD card module, (b) LCD display, and (c) near-field probes.
