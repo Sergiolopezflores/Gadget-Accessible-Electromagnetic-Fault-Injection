@@ -24,7 +24,7 @@ Figure 2: (a) Pinout diagram of the Arduino UNO R4 WiFi, displaying the layout a
 To achieve optimal sensitivity for detecting low-intensity EM signals, a near-field probe (Figure 3) was incorporated into the EM-SENSE design. The probe, replacing a conventional wire antenna, is critical for isolating and capturing low-level emissions, which are characteristic of computing environments. This near-field probe has been strategically positioned relative to the central processing unit (CPU) of the target system, based on a placement study that maximized signal quality by reducing noise and interference. This configuration allows for precise EM measurement in proximity to potential sources of EM variation, such as processor and memory components, which may reveal patterns related to specific software activities, including malware behavior.
 
 <p align="center">
-<img src="images/Sondas.jpg" alt="Probes" width="300"><br> <br/>
+<img src="images/Sondas.jpg" alt="Probes" width="300"><br>
 Figure 3: Near-field probes.
 </p>
 
