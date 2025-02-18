@@ -1,3 +1,19 @@
+The first thing we have to do is to capture the electromagnetic waves emitted by the processor while different types of malware or goodware are running.
+
+# 1 Execute malware and goodware
+The first thing to do is to run different types of malware and goodware on the target device. To do this we use the script **generate_traces.py**, which does is to run different malware or goodware on the device.
+To indicate what to run on the target device, it is passed a csv, at the time of execution, which indicates where the different types of files to run are stored.
+
+An example of the execution of this script could be:
+
+**insert command**.
+
+# 2 Capture traces
+Once the malware or goodware is running on the target device, the electromagnetic signals emitted by the processor must be captured.
+To do this we run the script **EMFDetector.ino** on the arduino. This file is configured to capture the traces at a frequency of 1KHz, which would be about 1000 samples per second. For this it is indicated that the time between readings is every 1ms. These traces are stored in a file, called **bashlite.txt** but can be renamed.
+
+
+
 To create the dataset we have to follow a series of steps:
 
 # 1 Transform the capture to csv.
