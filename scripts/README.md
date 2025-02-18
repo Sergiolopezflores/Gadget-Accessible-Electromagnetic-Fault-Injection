@@ -6,7 +6,7 @@ To indicate what to run on the target device, it is passed a csv, at the time of
 
 An example of the execution of this script could be:
 
-**insert command**.
+backticks (comando)
 
 # 2 Capture traces
 Once the malware or goodware is running on the target device, the electromagnetic signals emitted by the processor must be captured.
