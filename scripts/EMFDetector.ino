@@ -1,82 +1,81 @@
-// Librerias necesarias
+// Required libraries
 #include <Wire.h>
 #include <LiquidCrystal.h>
 #include <SPI.h>
 #include <SD.h>
 
-// Parámetros del sensor
+// Sensor parameters
 int senseLimit = 4096;
 int probePin = 0;
 int val = 0;
 
-//Tiempo entre lecturas 1ms
+// Time between readings: 1ms
 int updateTime = 1;
 
-//Creamos instancia LCD
+// Create LCD instance
 LiquidCrystal lcd(7,6,5,8,3,2);
 
-//Creamos instancia SD
+// Create SD instance
 File datafile;
 
 void setup()
 {
-  // Inicializamos conexion serie
+  // Initialize serial connection
   Serial.begin(115200); 
-  // Initializamos LCD
+  // Initialize LCD
   lcd.begin(12,2);
   lcd.setCursor(0,0);
 
-  // Mostramos por pantalla inicio de sistema
+  // Display system startup message
   lcd.print("EMF Detector ON");
   delay(1000); 
-  // Limpiamos pantalla
+  // Clear screen
   lcd.clear(); 
   delay(1000);
 
-  // Inicializamos lector de tarjeta SD
+  // Initialize SD card reader
   SD.begin(10);
   datafile = SD.open("SD.txt", FILE_WRITE);
   if (datafile){
-       //Si el fichero de texto es accesible lo mostramos por LCD 
-       lcd.print("Tarjeta SD ON");
-       datafile.println("Comenzamos toma de datos....");
+       // If the text file is accessible, display it on the LCD
+       lcd.print("SD Card ON");
+       datafile.println("Starting data collection....");
     } else {
-      //Si se ha producido error en el acceso a la tarjeta los mostramos por LCD
-      lcd.print("Tarjeta SD KO");
+      // If there was an error accessing the SD card, display it on the LCD
+      lcd.print("SD Card ERROR");
       delay(5000);
     }
   datafile.close();
   delay(2000);
 }
 
-
 void loop()
 {
-  //lectura de la sonda
+  // Read probe data
   val = analogRead(probePin);
 
-  // Si estamos obteniendo datos
+  // If we are receiving data
   if(val >= 1){
-    //mapeamos datos obtenidos   
+    // Map obtained data  
     val = map(val, 1, senseLimit, 1, 1023);
-    //Mostramos datos obtenidos por LCD
+    // Display obtained data on LCD
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("EMF level: ");
     lcd.setCursor(1,1);
     lcd.print(val);
-    //Creamos fichero txt con nombre de malware
+    // Create a text file with the malware name
     datafile = SD.open("bashlite.txt", FILE_WRITE);
     if (datafile) {
-      //Si no ha habido problema en el acceso al fichero txt
+      // If there was no problem accessing the text file
       datafile.println(val);
-      //Cerramos fichero
+      // Close file
       datafile.close();
     } else {
-      //Si hay problemas en el acceso al fichero txt
-      Serial.println("error abriendo bashlite.txt");      
+      // If there are problems accessing the text file
+      Serial.println("error opening bashlite.txt");      
       }
-      //Esperamos hasta siguiente toma de datos
+      // Wait until the next data reading
       delay(updateTime);
   }
 }
