@@ -1,14 +1,14 @@
-La estructura de este repositoria se distribuye de la siguiente manera:
+The structure of this repository is distributed as follows:
 
 # Dataset
-En esta carpeta se encuentran las trazas capturadas para la realización del experimento, que han sido las que hemos utilizado para entrenar los modelos.
-Además, tambien se encuentran los distintos archivos ```one-hot-encoding``` de los distintos escenarios, listos para entrenar y validar los modelos.
+This folder contains the traces captured for the experiment, which have been used to train the models.
+In addition, there are also the different ```one-hot-encoding``` files of the different scenarios, ready to train and validate the models.
 
 # Images
-Aquí se encuentran las imagenes utilizadas en el resto de explicaciones del repositorio para su correcta visualización.
+Here you can find the images used in the rest of the explanations of the repository for its correct visualization.
 
 # Scripts
-En esta carpeta están todos los scripts necesarios para la captura de datos, la creación del dataset y los distintos modelos utilizados.
+In this folder are all the necessary scripts for data capture, dataset creation and the different models used.
 
 # Electromagnetic Data Acquisition and System Design
-Aquí se explica de una manera mas detallada la arquitectura del hardware utilizado y diseño del sistema propuesto.
+Here is a more detailed explanation of the hardware architecture used and the proposed system design.
