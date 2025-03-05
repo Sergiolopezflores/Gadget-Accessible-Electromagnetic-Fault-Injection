@@ -16,7 +16,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('cmdFile', type=str, help="Path to a file containing the commands to launch.")
     parser.add_argument('-c', type=int, default=100, dest='count', help='Number of traces')
-    parser.add_argument('-w', type=str, default="/home/pi/wrapper", dest='wrapperPath', help='Path of the wrapper program')
     args = parser.parse_args()
 
     # Parse command file
@@ -35,7 +34,7 @@ if __name__ == '__main__':
     for _ in trange(args.count):
         for pre, cmd, tag in cmdLines:
             dataFile = "trace-{}.dat".format(randomString(16))
-            print('{} "{}"'.format(args.wrapperPath, cmd))
+            print("Executing: {}".format(cmd))
             if pre:
                 chan = ssh_transp.open_session()
                 chan.exec_command(pre)
@@ -44,7 +43,7 @@ if __name__ == '__main__':
                 chan.close()
             # Launch command
             chan = ssh_transp.open_session()
-            chan.exec_command('{} "{}"'.format(args.wrapperPath, cmd))
+            chan.exec_command(cmd)
             chan.close()
     
     ssh.close()
