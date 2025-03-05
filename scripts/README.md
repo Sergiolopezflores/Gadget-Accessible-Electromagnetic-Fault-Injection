@@ -7,8 +7,9 @@ To indicate what to run on the target device, it is passed a csv, at the time of
 An example of the execution of this script could be:
 
 ```bash
-python3 generate_traces.py ./cmdFile_packer.csv -c 1640000 -w /home/pi/wrapper
+python3 generate_traces.py ./cmdFile_packer.csv -c 1640000
 ```
+
 
 # 2 Capture traces
 Once the malware or goodware is running on the target device, the electromagnetic signals emitted by the processor must be captured.
