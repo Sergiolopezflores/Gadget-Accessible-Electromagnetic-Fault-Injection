@@ -7,7 +7,7 @@ To indicate what to run on the target device, it is passed a csv, at the time of
 An example of the execution of this script could be:
 
 ```bash
-insertar comando
+python3 generate_traces.py ./cmdFile_packer.csv -c 1640000 -w /home/pi/wrapper
 ```
 
 # 2 Capture traces
