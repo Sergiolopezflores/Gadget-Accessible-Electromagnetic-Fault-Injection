@@ -9,6 +9,7 @@ An example of the execution of this script could be:
 ```bash
 python3 generate_traces.py ./cmdFile_packer.csv -c 1640000
 ```
+Where the first parameter that we pass it is the csv where the different types of malware that we are going to execute in the device are found and with the option -c we pass it how many times we want it to be executed. We have to take into account that it has to last the sufficient time to make the complete capture that we want to make.
 
 
 # 2 Capture traces
