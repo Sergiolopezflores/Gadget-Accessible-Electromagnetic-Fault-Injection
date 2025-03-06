@@ -7,6 +7,9 @@ In addition, there are also the different ```one-hot-encoding``` files of the di
 # Images
 Here you can find the images used in the rest of the explanations of the repository for its correct visualization.
 
+# Results
+DESCRIBIR
+
 # Scripts
 In this folder are all the necessary scripts for data capture, dataset creation and the different models used.
 
