@@ -1,1 +1,1 @@
-
+Here are the results for the different types of scenarios, with different ways of interpreting the results, such as bar graphs, confusion matrices to see how reliable the model is, graphs to see how the model evolves over time and tables showing the more numerical results.
