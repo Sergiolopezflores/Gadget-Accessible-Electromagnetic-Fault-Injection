@@ -76,7 +76,8 @@ All software utilized for data acquisition is systematically documented in the s
     
     Loop Execution Bash Script: Enables the repetitive execution of the different files to be executed
     
-    One-hot-encoding file generator: All the files to convert the data to one-hot-encoding format to be able to run the different AI models are located here.
+    One-hot-encoding file generator: All the files to convert the data to one-hot-encoding format to be able to run 
+    the different AI models are located here.
 
 This setup and documentation collectively ensure that the EM-SENSE system can accurately and reliably detect and analyze electromagnetic emissions, supporting comprehensive data collection for the study of software behavior.
 
