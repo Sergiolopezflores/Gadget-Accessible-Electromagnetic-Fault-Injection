@@ -70,19 +70,16 @@ The detection device probe is connected to the analog input A0 (yellow cable) on
 
 In Figure 1, the final setup of the EM-SENSE equipment is illustrated, capturing electromagnetic emissions while executing a software block. This configuration represents the operational scenario used for data collection and assessment of emissions.
 
-All software utilized for data acquisition is systematically documented in a dedicated GitHub repository. Below is a list of the main software components employed:
+All software utilized for data acquisition is systematically documented in the scripts folder in this GitHub repository. Below is a list of the main software components employed:
 
     Arduino Sketch: Configures and operates the connected devices.
     
-    Trace Generator Script: Automates the generation of data traces.
+    Loop Execution Bash Script: Enables the repetitive execution of the different files to be executed
     
-    Loop Execution Bash Script: Enables the repetitive execution of the trace generator.
-    
-    Goodware and Malware Sample Programs: These samples, which are further detailed in section ~\ref{sec:dataset}, are used to benchmark the electromagnetic emissions in different software conditions.
+    One-hot-encoding file generator: All the files to convert the data to one-hot-encoding format to be able to run the different AI models are located here.
 
 This setup and documentation collectively ensure that the EM-SENSE system can accurately and reliably detect and analyze electromagnetic emissions, supporting comprehensive data collection for the study of software behavior.
 
-**MIRAR LO ANTERIOR**
 
 <p align="center">
 <img src="images/Probe.jpg" alt="Near-field probe capturing EM" width="250"><img src="images/Probe connection.jpg" alt="Wiring connections of the near-field probe and capturing in the EM-SENSE system" width="250">
