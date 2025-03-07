@@ -2,7 +2,7 @@ The first thing we have to do is to capture the electromagnetic waves emitted by
 
 # 1 Execute malware and goodware
 The first thing to do is to run different types of malware and goodware on the target device. To do this we use the script **generate_traces.py**, which does is to run different malware or goodware on the device.
-To indicate what to run on the target device, it is passed a csv, at the time of execution, which indicates where the different types of files to run are stored.
+To indicate what to run on the target device, it is passed a csv (there are some examples in this folder, depending on what is required), at the time of execution, which indicates where the different types of files to run are stored.
 
 An example of the execution of this script could be:
 
