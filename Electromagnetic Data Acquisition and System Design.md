@@ -83,9 +83,10 @@ This setup and documentation collectively ensure that the EM-SENSE system can ac
 
 
 <p align="center">
-<img src="images/Probe.jpg" alt="Near-field probe capturing EM" width="250">             <img src="images/Probe connection.jpg" alt="Wiring connections of the near-field probe and capturing in the EM-SENSE system" width="250">
+<img src="images/Probe.jpg" alt="Near-field probe capturing EM" width="250"> <img src="images/Probe connection.jpg" alt="Wiring connections of the near-field probe and capturing in the EM-SENSE system" width="250">
+Figure 6: (a) Near-field probe capturing EM (b) Probe conections.
 </p>
 
-Figure 6: (a) Near-field probe capturing EM (b) Probe conections.
+
 
 
