@@ -24,7 +24,7 @@ Figure 2: (a) Pinout diagram of the Arduino UNO R4 WiFi, displaying the layout a
 To achieve optimal sensitivity for detecting low-intensity EM signals, a near-field probe (Figure 3) was incorporated into the EM-SENSE design. The probe, replacing a conventional wire antenna, is critical for isolating and capturing low-level emissions, which are characteristic of computing environments. This near-field probe has been strategically positioned relative to the central processing unit (CPU) of the target system, based on a placement study that maximized signal quality by reducing noise and interference. This configuration allows for precise EM measurement in proximity to potential sources of EM variation, such as processor and memory components, which may reveal patterns related to specific software activities, including malware behavior.
 
 <p align="center">
-<img src="images/Sondas.jpg" alt="Probes" width="300"><br>
+<img src="images/Probes.jpg" alt="Probes" width="300"><br>
 Figure 3: Near-field probes.
 </p>
 
@@ -64,9 +64,9 @@ In Figure 5, the pin connections between the LCD screen and the Arduino microcon
 Figure 5: Pin connections between the LCD screen and the Arduino.
 </p>
 
-Near-Field Probe: Among the available probes for measurement collection, we selected one that allows us to position the probe as close  to the CPU as possible, covering the largest possible surface area (shown in Figure~\ref{fig:sonda}). This choice maximizes the spatial resolution of the electromagnetic field readings near the CPU.
+Near-Field Probe: Among the available probes for measurement collection, we selected one that allows us to position the probe as close  to the CPU as possible, covering the largest possible surface area (shown in Figure 6b). This choice maximizes the spatial resolution of the electromagnetic field readings near the CPU.
 
-The detection device probe is connected to the analog input A0 (yellow cable) on the Arduino, through a voltage divider with a 1 MΩ resistor (shown in Figure~\ref{fig:conex_sonda}). This setup enhances the sensitivity of the measurements, enabling a more precise detection of variations in electromagnetic emissions.
+The detection device probe is connected to the analog input A0 (yellow cable) on the Arduino, through a voltage divider with a 1 MΩ resistor (shown in Figure 6b). This setup enhances the sensitivity of the measurements, enabling a more precise detection of variations in electromagnetic emissions.
 
 In Figure 1, the final setup of the EM-SENSE equipment is illustrated, capturing electromagnetic emissions while executing a software block. This configuration represents the operational scenario used for data collection and assessment of emissions.
 
@@ -86,6 +86,6 @@ This setup and documentation collectively ensure that the EM-SENSE system can ac
 <img src="images/Probe.jpg" alt="Near-field probe capturing EM" width="250"><img src="images/Probe connection.jpg" alt="Wiring connections of the near-field probe and capturing in the EM-SENSE system" width="250">
 </p>
 
-Figure 6: Wiring connections of the near-field probe and capturing in the EM-SENSE system
+Figure 6: (a) Near-field probe capturing EM (b) Probe conections.
 
 
