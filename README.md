@@ -8,7 +8,7 @@ In addition, there are also the different ```one-hot-encoding``` files of the di
 Here you can find the images used in the rest of the explanations of the repository for its correct visualization.
 
 # Results
-DESCRIBIR
+This folder contains the validation results of the different models. There are confusion matrices, bar charts with accuracy, precision, recall, f1-score and macro avg results and graphs with the evolution of loss and precision over epocs. 
 
 # Scripts
 In this folder are all the necessary scripts for data capture, dataset creation and the different models used.
