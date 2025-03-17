@@ -1,4 +1,4 @@
-This folder contains the files necessary to train and validate the AI models.
+This folder contains the files needed to train and validate the AI models to detect and classify the different types of malware being executed.
 
 The CSV files of the different captures we have made have already been created, put together in a csv_final.txt file and converted to one-hot-encoding format in the one-hot-encoding.txt file which is the one we need to train and validate the different ML and DL models.
 
