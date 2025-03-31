@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Network Architectures</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
         table {
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 20px auto;
         }
         th, td {
             border: 1px solid black;
@@ -20,6 +23,9 @@
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
         }
     </style>
 </head>
