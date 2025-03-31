@@ -28,3 +28,14 @@
 | LSTM  | 128  | --     | --         |
 | Dense | 64   | --     | relu       |
 | Dense | N    | --     | softmax    |
+
+## GRU Architecture
+
+| Layer       | Size | Filter | Activation |
+|------------|------|--------|------------|
+| GRU | 128  | --  | --       |
+| GRU | 64   | --  | --       |
+| GRU | 32   | --  | --       |
+| Dense       | 128  | --     | relu       |
+| Dense       | 64   | --     | relu       |
+| Dense       | N    | --     | softmax    |
