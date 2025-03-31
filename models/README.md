@@ -31,6 +31,7 @@
 </head>
 <body>
     <h2>MLP Architecture</h2>
+    <div>
     <table>
         <tr>
             <th>Layer</th>
@@ -42,6 +43,7 @@
         <tr><td>Dense</td><td>64</td><td>--</td><td>relu</td></tr>
         <tr><td>Dense</td><td>N</td><td>--</td><td>softmax</td></tr>
     </table>
+    </div>
 
     <h2>CNN Architecture</h2>
     <table>
