@@ -36,3 +36,18 @@ to one-hot-encoding format.
 
 # 6 Validate one-hot-encoding file
 Once we have the one-hot-encoding file, we can use the script **validate_csv.py** to check that the file has been created correctly.
+
+
+The **one-hot-encoding.txt** file follows the structure detailed below:
+
+
+```text
+30,7,11,21,15,49,49,21,16,20,12,45,103,23,...,1.0,0.0,0.0,0.0,0.0
+31,5,46,31,37,30,27,37,39,9,120,45,78,11,...0.0,1.0,0.0,0.0,0.0
+...
+
+
+
+Each data instance consists of 1000 integers representing feature values, followed by *X* one-hot encoded values indicating the class label (e.g., goodware, ransomware), ensuring a structured and interpretable dataset.
+
+To preserve the integrity of the dataset, each line must contain exactly 1000 feature values followed by *X* one-hot encoded class indicators. A validation script, available on the GitHub repository, verifies the adherence to this format, preventing errors due to malformed input data.
