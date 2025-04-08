@@ -52,4 +52,4 @@ The **one-hot-encoding.txt** file follows the structure detailed below:
 
 Each data instance consists of 1000 integers representing feature values, followed by *X* one-hot encoded values indicating the class label (e.g., goodware, ransomware), ensuring a structured and interpretable dataset.
 
-To preserve the integrity of the dataset, each line must contain exactly 1000 feature values followed by *X* one-hot encoded class indicators. A validation script, available on the GitHub repository, verifies the adherence to this format, preventing errors due to malformed input data.
+To preserve the integrity of the dataset, each line must contain exactly 1000 feature values followed by *X* one-hot encoded class indicators.
