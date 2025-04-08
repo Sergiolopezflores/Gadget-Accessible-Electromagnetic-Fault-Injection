@@ -38,6 +38,8 @@ to one-hot-encoding format.
 Once we have the one-hot-encoding file, we can use the script **validate_csv.py** to check that the file has been created correctly.
 
 
+
+
 The **one-hot-encoding.txt** file follows the structure detailed below:
 
 
