@@ -7,6 +7,12 @@ In addition, there are also the different ```one-hot-encoding``` files of the di
 # Images
 Here you can find the images used in the rest of the explanations of the repository for its correct visualization.
 
+# Malware-goodware
+Here is all the malware and goodware executed on the raspberry and used to make the captures
+
+# Models
+In this folder you will find all the models used for this project.
+
 # Results
 This folder contains the validation results of the different models. There are confusion matrices, bar charts with accuracy, precision, recall, f1-score and macro avg results and graphs with the evolution of loss and precision over epocs. 
 
