@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # Initialize SSH connection
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('192.168.128.37', username='ocarlon', password='TFG34')
+    ssh.connect('X.X.X.X', username='username', password='password')
     ssh_transp = ssh.get_transport()
 
     for _ in trange(args.count):
