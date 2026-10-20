@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 
 import paramiko
@@ -7,6 +8,9 @@ import argparse
 from threading import Thread
 from tqdm import trange
 import time
+
+MIN_SLEEP = 0.5
+MAX_SLEEP = 2.0
 
 def randomString(stringLength=16):
     """Generate a random hex-string of fixed length """
@@ -28,7 +32,7 @@ if __name__ == '__main__':
     # Initialize SSH connection
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('X.X.X.X', username='username', password='password')
+    ssh.connect('172.16.134.180', username='ocarlon', password='TFG34')
     ssh_transp = ssh.get_transport()
 
     for _ in trange(args.count):
@@ -41,9 +45,15 @@ if __name__ == '__main__':
                 while not chan.exit_status_ready():
                     time.sleep(0.01)
                 chan.close()
+
             # Launch command
             chan = ssh_transp.open_session()
             chan.exec_command(cmd)
+            #time.sleep(1)
+            #while not chan.exit_status_ready():
+                #time.sleep(0.01)
             chan.close()
-    
+
+            time.sleep(random.uniform(MIN_SLEEP, MAX_SLEEP))
+
     ssh.close()
