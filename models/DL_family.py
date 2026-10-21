@@ -3,7 +3,10 @@ import gc
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, f1_score, classification_report, confusion_matrix, ConfusionMatrixDisplay
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 CLASSES = ['BENIGN', 'BASHLITE', 'MIRAI', 'MAK', 'KISNI', 'GONNACRY', 'ENCODER', 'SNOOPY', 'WIRENET']
 TASK = "family"
@@ -70,6 +73,21 @@ def save_results(out_dir, model, task, summaries, capture_rows, run_rows):
     pd.DataFrame(run_rows).to_csv(f"{prefix}_by_run.csv", index=False)
 
 
+def save_confusion_matrix(cm, classes, out_dir, model_name, fold_name):
+    cm_dir = out_dir / "confusion_matrices"
+    cm_dir.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(max(6, len(classes) * 0.9), max(5, len(classes) * 0.8)))
+    ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes).plot(
+        ax=ax, cmap="Blues", xticks_rotation=45, values_format="d", colorbar=False
+    )
+    ax.set_title(f"{model_name.upper()} - {fold_name}")
+    fig.tight_layout()
+    name = f"{model_name}_{fold_name}"
+    fig.savefig(cm_dir / f"{name}.png", dpi=300, bbox_inches="tight")
+    fig.savefig(cm_dir / f"{name}.pdf", bbox_inches="tight")
+    plt.close(fig)
+
+
 def get_args(models):
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", choices=models, required=True)
@@ -115,6 +133,7 @@ def main():
     classes = CLASSES
     X, y, captures, runs = load_data(Path(__file__).resolve().parent, classes)
     summaries, by_capture, by_run = [], [], []
+    total_cm = np.zeros((len(classes), len(classes)), dtype=np.int64)
     for fold in range(1, N_RUNS + 1):
         test_ids = {f"{cls}/R{fold:02d}" for cls in classes}
         test_mask = np.isin(runs, list(test_ids))
@@ -144,6 +163,9 @@ def main():
         model.fit(X_train, y_train, epochs=EPOCHS, batch_size=BATCH_SIZE, shuffle=True, verbose=1)
         probabilities = model.predict(X_test, batch_size=BATCH_SIZE, verbose=0)
         pred = np.argmax(probabilities, axis=1)
+        fold_cm = confusion_matrix(y_test, pred, labels=list(range(len(classes))))
+        total_cm += fold_cm
+        save_confusion_matrix(fold_cm, classes, args.output_dir, args.model, f"fold_{fold}")
         result, cr, rr = evaluate(y_test, pred, captures[test_mask], runs[test_mask], fold, args.model, classes)
         summaries.append(result)
         by_capture.extend(cr)
@@ -152,6 +174,7 @@ def main():
         del model, X_train, X_test
         tf.keras.backend.clear_session()
         gc.collect()
+    save_confusion_matrix(total_cm, classes, args.output_dir, args.model, "overall")
     df = pd.DataFrame(summaries)
     print("\nFINAL RESULTS\n", df.to_string(index=False))
     for metric in ("accuracy", "macro_f1", "weighted_f1"):
